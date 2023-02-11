@@ -1,15 +1,28 @@
-# <img src="public/icons/icon_48.png" width="45" align="left"> Imageblur
+# Chrome Extension: Image Blur (Unpublished)
 
-My Chrome Extension
+This chrome extension blurs any image displayed on the site if found adult. 
 
 ## Features
 
-- Feature 1
-- Feature 2
+- Blur images automatically if found adult
+- Enable/Disable the feature #1
 
-## Install
+## Requirements
 
-[**Chrome** extension]() <!-- TODO: Add chrome extension link inside parenthesis -->
+- Node (recommended version: [v18.12.1](https://nodejs.org/download/release/v18.12.1/))
+
+## Running locally
+
+### Commands
+
+- `cd image-blur-chrome-ext`
+- `npm run build`
+
+### Load extension in chrome browser locally
+
+- Open chrome web browser and goto chrome://extensions/
+- Click on Load unpacked and browse image-blur-chrome-ext/build
+- Select directory build
 
 ## Contribution
 
