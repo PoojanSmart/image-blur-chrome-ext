@@ -25,7 +25,10 @@ function blurimages() {
         (async (image) => {
           if (image.src){
             image.classList.add("blur-processed");
-            loadandsendimage(image.src, image);
+            if (getDataOriginal(image))
+              loadandsendimage(getDataOriginal(image), image);
+            else
+              loadandsendimage(image.src, image);            
           }
         })(img);
       }
@@ -79,4 +82,16 @@ function loadandsendimage(url, imgtag) {
     }
   };
   img.src = url;
+}
+
+function getDataOriginal(imgtag) {
+  for (attrNames of imgtag.getAttributeNames()) {
+    if (attrNames == "data-original") {
+      imgsrc = imgtag.getAttribute("data-original");
+      if (imgsrc != null && imgsrc != "")
+        return imgsrc;
+      else
+        return null;
+    }
+  }
 }
