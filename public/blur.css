@@ -1,4 +1,4 @@
 .blur-image {
-    filter: blur(50px);
-    -webkit-filter: blur(50px);
+    filter: blur(50px) !important;
+    -webkit-filter: blur(50px) !important;
 }
